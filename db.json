@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "name": "user1",
+      "email": "user1@bdwater.com",
+      "color": "red"
+    },
+    {
+      "name": "user2",
+      "email": "user2@bdwater.com",
+      "color": "yellow"
+    },
+    {
+      "name": "user3",
+      "email": "user3@bdwater.com",
+      "color": "blue"
+    },
+    {
+      "name": "user4",
+      "email": "user4@bdwater.com",
+      "color": "green"
+    },
+    {
+      "name": "user5",
+      "email": "user5@bdwater.com",
+      "color": "lightblue"
+    }
+  ]
+}

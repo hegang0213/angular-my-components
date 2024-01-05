@@ -1,0 +1,4 @@
+.clr-select-wrapper select, .clr-multiselect-wrapper select, select {
+  border: var(--cds-alias-object-border-width-100) solid var(--clr-combobox-border-color);
+  border-radius: var(--clr-combobox-border-radius);
+}

@@ -1,0 +1,67 @@
+  <div class="clr-row">
+
+    <div class="clr-col-lg-4 clr-col-md-6 clr-col-sm-6 clr-col-12">
+      <div class="card ">
+        <h3 class="card-header">Select</h3>
+        <div class="card-block" style="padding-top: 0px;">
+          <div>
+            <clr-select-container >
+              <label>I've got some options</label>
+              <select clrSelect [(ngModel)]="selectedUser" aria-placeholder="Select a user" style="width:200px">
+                @for(user of users; track user.name) {
+                  <option [ngValue]="user">{{user.name}}</option>
+                }
+              </select>
+            </clr-select-container>
+
+            <clr-combobox-container>
+              <label>Favorite customers</label>
+              <clr-combobox [(ngModel)]="selection" clrMulti="true">
+                <ng-container *clrOptionSelected="let selected">
+                  {{selected.name}}
+                </ng-container>
+                <clr-options>
+                  @for(user of users; track user.name) {
+                    <clr-option [clrValue]="user">
+                      {{ user.name }}
+                    </clr-option>
+                  }
+                </clr-options>
+              </clr-combobox>
+
+            </clr-combobox-container>
+          </div>
+        </div>
+        <div class="card-block">
+          You selected: <span cds-text="semibold" class="display-inline">{{selectedUser && selectedUser.name}}</span>
+        </div>
+        <div class="card-block">
+          Selection: <span cds-text="semibold" class="display-inline">{{selection | json}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clr-col-lg-4 clr-col-md-6 clr-col-12">
+      <div class="card ">
+        <h3 class="card-header">Head</h3>
+        <div class="card-block" style="padding-top:0px">
+          <clr-datagrid class="datagrid-compact">
+            <clr-dg-column>Name</clr-dg-column>
+            <clr-dg-column>Email</clr-dg-column>
+            <clr-dg-column></clr-dg-column>
+
+            @for(user of users;track user.name) {
+            <clr-dg-row>
+              <clr-dg-cell>{{user.name}}</clr-dg-cell>
+              <clr-dg-cell>{{user.email}}</clr-dg-cell>
+              <clr-dg-cell>
+                <span class="color-square" [style.backgroundColor]="user.color"></span>
+              </clr-dg-cell>
+            </clr-dg-row>
+            }
+          </clr-datagrid>
+        </div>
+      </div>
+    </div>
+  </div>
+  
