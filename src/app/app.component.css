@@ -1,4 +1,14 @@
+
 .clr-select-wrapper select, .clr-multiselect-wrapper select, select {
   border: var(--cds-alias-object-border-width-100) solid var(--clr-combobox-border-color);
+  border-radius: var(--clr-combobox-border-radius);
+}
+
+.color-square {
+  display: inline-block;
+  vertical-align: text-bottom;
+  height: var(--cds-global-space-7);
+  width: var(--cds-global-space-7);
+  border: var(--cds-alias-object-border-width-100) solid var(--cds-global-color-construction-1000);
   border-radius: var(--clr-combobox-border-radius);
 }
